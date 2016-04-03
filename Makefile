@@ -1,4 +1,5 @@
 -include Makefile.settings
+.DEFAULT_GOAL := help
 
 run_db:
 	echo "test"
@@ -17,3 +18,6 @@ run:
 
 clean:
 	find . -name "*.pyc" -exec rm -rf {} \;
+
+help:
+	echo "- run_db \n- db_migrate \n- db_upgrade \n- db_downgrade \n- run \n- clean"
